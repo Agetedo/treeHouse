@@ -1,1 +1,1 @@
-<a>TreeHouse store<a/>
+TreeHouse store
