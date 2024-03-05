@@ -1,0 +1,68 @@
+.read-articles {
+    background-color: var(--grey-color);
+    padding-bottom: 60px;
+    .conteiner {
+      max-width: 1264px;
+      padding: 0 15px;
+      margin: 0 auto;
+    }
+}
+.read-articles__items {
+    display: flex;
+    align-items: stretch;
+    gap: 39.5px; 
+}
+#readMoreButton {
+    margin: 30px auto 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 48px;
+    border: none;
+    background-color: transparent;
+    border-radius: 80px;
+    border: 2px solid var(--green-color);
+    font-family: 'GT Cinetype Trial';
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--green-color);
+    cursor: pointer;
+    transition: all 1s ease;
+}
+//---@media-read-articles-------------
+@media (hover: hover) and (pointer: fine) {
+    #readMoreButton:hover {
+      background-color: var(--green-color);
+      color: var(--white-text-color);
+    }
+}
+@media (hover: none) {
+    #readMoreButton:active {
+      background-color: var(--green-color);
+      color: var(--white-text-color);
+    }
+}
+@media(max-width: 1264px) {
+    .read-articles__items {
+      gap: calc(16px + (39.5 - 16)*((100vw - 768px)/(1264 - 768)));
+    }
+    #readMoreButton {
+      margin-top: calc(16px + (30 - 16)*((100vw - 320px)/(1264 - 320)));
+      font-size: calc(11px + (14 - 11)*((100vw - 320px)/(1264 - 320)));
+      line-height: calc(11px + (14 - 11)*((100vw - 320px)/(1264 - 320)));
+      padding: calc(10px + (18 - 10)*((100vw - 320px)/(1264 - 320)))
+               calc(30px + (48 - 30)*((100vw - 320px)/(1264 - 320)));
+    }
+}
+@media(max-width: 767px) {
+    .read-articles__items {
+      gap: calc(15px + (30 - 15)*((100vw - 320px)/(767 - 320)));
+    } 
+}
+@media(max-width: 415px) {
+    .read-articles__items {
+      flex-direction: column;
+    }
+}

@@ -1,0 +1,57 @@
+.shop__baner {
+    .conteiner {
+      max-width: 1264px;
+      padding: 0 15px;
+      margin: 0 auto;
+    }
+}
+.baner {
+    margin-top: 24px;
+    padding-top: 120px;
+    padding-bottom: 198px;
+    background-image: url("/shop-all-baner-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+    p {
+      line-height: 14px;
+      color: var(--white-text-color);
+      text-transform: uppercase;
+    }
+    h2 {
+      max-width: 334px;
+      font-family: 'Linotype Didot Std';
+      font-size: 48px;
+      line-height: 48px;
+      color: var(--white-text-color);
+    }
+}
+//---@media-shop__baner--------------
+@media(max-width: 1234px) {
+    .shop__baner .conteiner {
+      padding: 0px;
+    }
+    .baner {
+      padding-top: calc(44px + (120 - 44)*((100vw - 320px)/(1234 - 320)));
+      padding-bottom: calc(120px + (198 - 120)*((100vw - 320px)/(1234 - 320)));
+      gap: calc(8px + (16 - 8)*((100vw - 320px)/(1234 - 320)));
+        h2 {
+          font-size: calc(29px + (48 - 29)*((100vw - 320px)/(1234 - 320)));
+          line-height: calc(35px + (48 - 35)*((100vw - 320px)/(1234 - 320)));
+        }
+        p {
+          font-size: calc(9px + (14 - 9)*((100vw - 320px)/(1234 - 320)));
+          line-height: calc(9px + (14 - 9)*((100vw - 320px)/(1234 - 320)));
+        }
+    }
+}
+@media(max-width: 1024px) {
+    .baner {
+      margin-top: 0px;
+    }
+}

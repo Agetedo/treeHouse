@@ -1,0 +1,97 @@
+.people {
+    margin-top: 160px;
+    .conteiner {
+      position: relative;
+      max-width: 1264px;
+      padding: 0 15px;
+      margin: 0 auto;
+    }
+}
+#peopleLabel {
+    position: absolute;
+    top: -25px;
+    right: 15px;
+}
+.people__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.people__content {
+    margin-top: 46px;
+    .rubric {
+      margin-top: 16px;
+      line-height: 17px;
+      text-transform: uppercase;
+    }
+}
+.people__text {
+    margin-top: 24px;
+    max-width: 385px;
+    line-height: 19px;
+}
+#contentImage {
+  margin-top: 96px;  
+}
+//---@media-people---------------
+@media(max-width: 1440px) {
+    .people {
+      margin-top: calc(40px + (160 - 40)*((100vw - 320px)/(1440 - 320)));
+    }
+}
+@media(max-width: 1264px) {
+    .people__content .rubric {
+      margin-top: calc(9px + (16 - 9)*((100vw - 320px)/(1264 - 320)));
+      font-size: calc(10px + (14 - 10)*((100vw - 320px)/(1264 - 320)));
+      line-height: calc(12px + (17 - 12)*((100vw - 320px)/(1264 - 320)));
+    }
+    .people__text {
+      font-size: calc(12px + (14 - 12)*((100vw - 320px)/(1264 - 320)));
+      line-height: calc(17px + (19 - 17)*((100vw - 320px)/(1264 - 320)));
+    }
+    #contentImage {
+      margin-top: calc(20px + (96 - 20)*((100vw - 1023px)/(1264 - 1023)));
+    }
+}
+@media(max-width: 1147px) {
+    .people__items {
+      gap: 30px;
+    }
+}
+@media(max-width: 1024px) {
+    #peopleLabel,
+    #contentImage {
+      display: none;
+    }
+    .people__content,
+    #peopleImage {
+      width: 50%;
+    }
+    .people__text {
+      max-width: 100%;
+    }
+    .people__content {
+      margin-top: 0px;
+    }
+    .people__items {
+      align-items: center;
+    }
+}
+@media(max-width: 580px) {
+    .people__items {
+      flex-direction: column-reverse;
+      gap: calc(15px + (20 - 15)*((100vw - 320px)/(580 - 320)));
+    }
+    .people__content,
+    #peopleImage {
+      width: 100%;
+    }
+}
+@media(max-width: 385px) {
+    .people .conteiner {
+      padding: 0px;
+    }
+    .people__content {
+      padding: 0px 15px 0px 15px;
+    }
+}

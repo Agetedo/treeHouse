@@ -1,0 +1,90 @@
+.change-email {
+    margin-bottom: 160px;
+    .conteiner { 
+      max-width: 1264px;
+      padding: 0 15px;
+      margin: 0 auto;
+    }
+}
+.change-email__items {
+    display: flex;
+    align-items: flex-start;
+    gap: 125px;
+}
+.change-email__info {
+    text-transform: uppercase;
+    h3 {
+      margin-top: 16px;
+      max-width: 297px;
+      font-size: 20px;
+      line-height: 24px;
+    }
+    h4 {
+      margin-top: 128px;
+      max-width: 325px;
+      line-height: 14px;
+    }
+    .change-email__text {
+      margin-top: 16px;
+      max-width: 513px;
+      font-size: 44px;
+      line-height: 44px;
+    }
+}
+//---@media-change-email---------------
+@media(max-width: 1440px) {
+    .change-email {
+      margin-bottom: calc(50px + (160 - 50)*((100vw - 320px)/(1440 - 320)));
+    }
+}
+@media(max-width: 1264px) {
+    .change-email__items {
+      gap: calc(18px + (125 - 18)*((100vw - 768px)/(1264 - 768)));
+    }
+    .change-email__info h3 {
+      font-size: calc(12px + (20 - 12)*((100vw - 320px)/(1264 - 320)));
+      line-height: calc(14px + (24 - 14)*((100vw - 320px)/(1264 - 320)));
+    }
+    .change-email__info h4 {
+      margin-top: calc(22px + (128 - 22)*((100vw - 768px)/(1264 - 768)));
+      font-size: calc(10px + (14 - 10)*((100vw - 320px)/(1264 - 320)));
+      line-height: calc(12px + (14 - 12)*((100vw - 320px)/(1264 - 320)));
+    }
+    .change-email__info .change-email__text {
+      font-size: calc(16px + (44 - 16)*((100vw - 320px)/(1264 - 320)));
+      line-height: calc(16px + (44 - 16)*((100vw - 320px)/(1264 - 320)));
+    }
+}
+@media(max-width: 767px) {
+    .change-email__info h4 {
+      margin-top: 22px;
+    }
+    .change-email__items {
+      flex-direction: column-reverse;
+      gap: 0px;
+      align-items: center;
+    }
+    .change-email__info img {
+      display: none;
+    }
+    .change-email__info h3,
+    .change-email__info h4,
+    .change-email__info .change-email__text {
+      max-width: 100%;
+    }
+    .change-email__info .change-email__text {
+      margin-top: 5px;
+    }
+    .change-email__info h3 {
+      text-align: center;
+    }
+    .change-email__image img {
+      width: 100vw;
+    }
+    .change-email .conteiner {
+      padding: 0px;
+    }
+    .change-email__info {
+      padding: 0 15px 0 15px;
+    }
+}

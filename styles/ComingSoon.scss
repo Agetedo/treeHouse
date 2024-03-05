@@ -1,0 +1,134 @@
+.soon {
+  background-image: url("/soon-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+}
+.soon__conteiner {
+  max-width: 946px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.soon__wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: calc(100vh - 20px);//minus height reserved__text
+}
+.soon__items {
+  align-self: center;
+}
+.soon-heading {
+    text-align: center;
+    h2 {
+      font-size: 90px;
+      font-weight: 700;
+      line-height: 117px;
+      letter-spacing: 0.04em;
+      color: var(--light-brown-color);
+    }
+    p {
+      max-width: 741px;
+      line-height: 28px;
+      letter-spacing: 0.04em;
+      color: var(--green-color);
+    }
+}
+.timer__items {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.time__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    p {
+      font-size: 64px;
+      line-height: 64px;
+      letter-spacing: 0.03em;
+    }
+    span {
+      font-size: 23px;
+      line-height: 30px;
+      letter-spacing: 0.04em;
+    }
+}
+.home__link {
+  margin-top: 72px;
+  text-align: center;
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 32px;
+      background-color: var(--light-brown-color);
+      border-radius: 20px;
+      font-weight: 700;
+      line-height: 28px;
+      letter-spacing: 0.04em;
+      color: var(--white-text-color);
+      transition: all 1s ease;
+    }
+}
+.reserved__text {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+    text-align: center;
+}
+//---@media-COMING SOON BANNER------------------
+@media (hover: hover) and (pointer: fine) {
+    .home__link a:hover {
+      background-color: var(--page404-light-green-color);
+      color: var(--green-color);
+    }
+}
+@media (hover: none) {
+    .home__link a:active {
+      background-color: var(--page404-light-green-color);
+      color: var(--green-color);
+    }
+}
+@media(max-width: 1920px) {
+    .soon-heading h2 {
+      font-size: calc(38px + (90 - 38)*((100vw - 320px)/(1920 - 320)));
+      line-height: calc(45px + (117 - 45)*((100vw - 320px)/(1920 - 320)));
+    }
+    .soon-heading p {
+      font-size: calc(12px + (16 - 12)*((100vw - 320px)/(1920 - 320))); 
+      line-height: calc(22px + (28 - 22)*((100vw - 320px)/(1920 - 320)));
+    }
+    .timer__items {
+      margin-top: calc(20px + (40 - 20)*((100vw - 320px)/(1920 - 320)));
+    }
+    .time__box p {
+      font-size: calc(30px + (64 - 30)*((100vw - 320px)/(1920 - 320)));
+      line-height: calc(30px + (64 - 30)*((100vw - 320px)/(1920 - 320)));
+    }
+    .time__box span {
+      font-size: calc(12px + (23 - 12)*((100vw - 320px)/(1920 - 320)));
+      line-height: calc(14px + (30 - 14)*((100vw - 320px)/(1920 - 320)));
+    }
+}
+@media(max-width: 1024px) {
+    .reserved__text {
+      display: none;
+    }
+    .home__link {
+      margin-top: calc(34px + (72 - 34)*((100vw - 320px)/(1024 - 320)));
+    }
+}
+@media(orientation: landscape) and (max-height: 480px) {
+   .soon {
+      overflow-y: scroll;
+    }
+    .soon__wrapper {
+      height: 100vh;
+    }
+}

@@ -1,0 +1,93 @@
+.team-video .conteiner {
+    max-width: 1264px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.team-video__items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    .team-video__text { 
+      max-width: 249px;
+      line-height: 17px;
+      text-transform: uppercase;
+    }
+}
+.manufacture__items {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    p {
+      line-height: 19px;
+    }
+}
+.video-wrapper {
+    position: relative;
+    margin: 29px auto 0 auto;
+}
+.video {
+    background: url("/video-poster.jpg") 50% 50% / cover no-repeat;
+    object-fit: cover;
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+.play-button {
+    position: absolute;
+    left: calc(50% - 54px);
+    top: calc(50% - 49.5px);
+    border: none;
+    padding: 0px;
+    background-color: transparent;
+    color: var(--light-brown-color);
+    cursor: pointer;
+    transition: all 1s ease;
+}
+//---@media-team-video----------------------
+@media (hover: hover) and (pointer: fine) {
+    .play-button:hover {
+      opacity: 0.5;
+    }
+}
+@media (hover: none) {
+    .play-button:active {
+      opacity: 0.5; 
+    }
+}
+@media(max-width: 1264px) {
+    .team-video__items .team-video__text {
+      font-size: calc(10px + (14 - 10)*((100vw - 320px)/(1264 - 320)));
+      line-height: calc(12px + (17 - 12)*((100vw - 320px)/(1264 - 320)));
+    } 
+    .manufacture__items p {
+      font-size: calc(12px + (14 - 12)*((100vw - 320px)/(1264 - 320)));
+      line-height: calc(17px + (19 - 17)*((100vw - 320px)/(1264 - 320)));
+    }
+    .manufacture__items img {
+      width: calc(12px + (18 - 12)*((100vw - 320px)/(1264 - 320)));
+    }
+    .video-wrapper {
+      margin-top: calc(9px + (29 - 9)*((100vw - 320px)/(1264 - 320)));
+    }
+    .play-button {
+      width: calc(50px + (108 - 50)*((100vw - 320px)/(1264 - 320)));
+      top: calc(50% - ((40px + (120 - 40)*((100vw - 320px)/(1264 - 320)))) / 2);
+      left: calc(50% - ((50px + (120 - 50)*((100vw - 320px)/(1264 - 320)))) / 2);
+    }
+}
+@media(max-width: 768px) {
+    .team-video__items .team-video__text {
+      display: none;
+    }
+    .team-video .conteiner {
+      padding: 0px;
+    }
+    .manufacture__items {
+      padding-right: 15px;
+    }
+    .team-video__items {
+      justify-content: flex-end;
+    }
+}

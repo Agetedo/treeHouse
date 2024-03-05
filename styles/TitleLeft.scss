@@ -1,0 +1,23 @@
+.caption__left {
+    line-height: 14px;
+    text-transform: uppercase;
+}
+.title__left {
+    margin-top: 16px;
+    font-family: 'Linotype Didot Std';
+    font-size: 48px;
+    line-height: 48px; 
+}
+
+//---@media-TitleLeft-------------------
+@media(max-width: 1264px) {
+    .caption__left {
+      font-size: calc(10px + (14 - 10)*((100vw - 320px)/(1264 - 320)));
+      line-height: calc(10px + (14 - 10)*((100vw - 320px)/(1264 - 320)));
+    }
+    .title__left {
+      margin-top: calc(9px + (16 - 9)*((100vw - 320px)/(1264 - 320)));
+      font-size: calc(22px + (48 - 22)*((100vw - 320px)/(1264 - 320)));
+      line-height: calc(26px + (48 - 26)*((100vw - 320px)/(1264 - 320)));
+    }
+}

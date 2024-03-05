@@ -1,0 +1,88 @@
+.article-heading {
+    padding-top: 48px;
+    background:  linear-gradient(180deg, rgba(217,199,187,1) 71%, rgba(244,243,240,1) 71%);;
+    .conteiner {
+      max-width: 1264px;
+      padding: 0 15px;
+      margin: 0 auto;
+    }
+}
+.page-link__items {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    a {
+      line-height: 14px;
+      transition: all 1s ease;
+    }
+}
+#ArticleArrow {
+    transform: rotate(180deg);
+}
+.article-heading__title {
+    margin-top: 80px;
+    margin-left: 106px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    h2 {
+      max-width: 850px;
+      font-family: 'Linotype Didot Std';
+      font-size: 48px;
+      line-height: 53px;
+    }
+}
+.article-heading__image {
+    margin-top: 65px;
+    img {
+      margin: 0 auto;
+    }
+}
+//---@-media-article-heading-------------
+@media (hover: hover) and (pointer: fine) {
+    .page-link__items a:hover {
+      color: var(--light-brown-color);
+    }
+}
+@media (hover: none) {
+    .page-link__items a:active {
+      color: var(--light-brown-color);
+    }
+}
+@media(max-width: 1440px) {
+    .article-heading {
+      padding-top: calc(30px + (48 - 30)*((100vw - 320px)/(1440 - 320)));
+    }
+}
+@media(max-width: 1264px) {
+    .article-heading__title {
+      margin-top: calc(0px + (80 - 0)*((100vw - 768px)/(1264 - 768)));;
+      margin-left: calc(0px + (106 - 0)*((100vw - 1024px)/(1264 - 1024)));
+        h2 {
+          font-size: calc(22px + (48 - 22)*((100vw - 320px)/(1264 - 320)));
+          line-height: calc(27px + (53 - 27)*((100vw - 320px)/(1264 - 320)));
+        }
+    }
+    .article-heading__image {
+        margin-top: calc(15px + (65 - 15)*((100vw - 320px)/(1264 - 320)));
+    }
+}
+@media(max-width: 1024px) {
+    .page-link__items,
+    .article-heading__title img {
+      display: none;
+    }
+    .article-heading__title {
+      margin-left: 0px;
+      display: block;
+    }
+}
+@media(max-width: 768px) {
+    .article-heading .conteiner {
+      padding: 0;
+    }
+    .article-heading__title{
+      margin-top: 0px;
+      padding: 0 15px;
+    }
+}

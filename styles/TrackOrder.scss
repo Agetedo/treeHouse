@@ -1,0 +1,155 @@
+.track-order {
+    padding-top: 156px;
+    padding-bottom: 160px;
+    background-image: url("/track-order-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+    .conteiner {
+      max-width: 1264px;
+      padding: 0 15px;
+      margin: 0 auto;
+    }
+}
+.track-order__title {
+    font-family: 'Linotype Didot Std';
+    font-size: 48px;
+    line-height: 48px;
+}
+.track-order__items {
+    margin-top: 56px;
+    display: flex;
+    align-items: flex-start;
+    gap: 76px;
+}
+#form4,
+#form5 { 
+    text-transform: uppercase;
+    label {
+      display: block;
+      margin-bottom: 12px;
+      font-size: 20px;
+      line-height: 20px;
+    }
+    button {
+      margin-top: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 48px;
+      border: none;
+      border-radius: 80px;
+      background-color: var(--light-brown-color);
+      font-family: 'GT Cinetype Trial';
+      line-height: 14px;
+      text-align: center;
+      color: var(--white-text-color);
+      cursor: pointer; 
+      transition: all 1s ease-in-out;
+    }
+}
+#form4 #enterOrder {
+    margin-bottom: 24px;
+}
+#form4 #enterOrder,
+#form4 #enterEmail,
+#form5 #enterTracking {
+    outline-style: none;
+    padding: 17px;
+    width: 346px;
+    border-radius: 8px;
+    border: 1px solid var(--green-color);
+    background: transparent;
+    line-height: 14px;
+    color: var(--green-color);
+}
+#trackOrderOr {
+    margin-top: 30px;
+    display: block; 
+    font-family: 'Northwell';
+    font-size: 64px;
+    line-height: 64px;
+    color: var(--light-brown-color);
+}
+//---@media-track-order-------------------
+@media (hover: hover) and (pointer: fine) {
+    #form4 button:hover,
+    #form5 button:hover {
+      opacity: 0.7;
+    }
+}
+@media (hover: none) {
+    #form4 button:active,
+    #form5 button:active {
+      opacity: 0.7;  
+    }
+}
+@media(max-width: 1440px) {
+    .track-order {
+      padding-bottom: calc(40px + (160 - 40)*((100vw - 320px)/(1440 - 320)));
+    }
+}
+@media(max-width: 1264px) {
+    .track-order__items {
+      gap: calc(19px + (76 - 19)*((100vw - 1024px)/(1264 - 1024)));
+    }
+    .track-order {
+      padding-top: calc(92px + (156 - 92)*((100vw - 1024px)/(1264 - 1024)));
+    }
+}
+@media(max-width: 1024px) {
+    .track-order {
+      background-image: none !important;
+      padding-top: calc(30px + (60 - 30)*((100vw - 320px)/(1024 - 320)));
+    }
+    .track-order__items {
+      gap: 19px;
+      justify-content: center;
+      margin-top: calc(21px + (56 - 21)*((100vw - 320px)/(1024 - 320)));
+    }
+    .track-order__title {
+      text-align: center;
+      font-size: calc(30px + (48 - 30)*((100vw - 320px)/(1024 - 320)));
+      line-height: calc(34px + (48 - 34)*((100vw - 320px)/(1024 - 320)));
+    }
+    #form4 button, 
+    #form5 button {
+      padding: calc(12px + (18 - 12)*((100vw - 320px)/(1024 - 320))) 
+               calc(33px + (48 - 33)*((100vw - 320px)/(1024 - 320)));
+      font-size: calc(11px + (14 - 11)*((100vw - 320px)/(1024 - 320)));
+    }
+    #form4 #enterEmail, 
+    #form4 #enterOrder, 
+    #form5 #enterTracking {
+      width: 290px;
+      padding: calc(7px + (17 - 7)*((100vw - 320px)/(1024 - 320)));
+    }
+    #form4 label, 
+    #form5 label {
+      font-size: calc(11px + (20 - 11)*((100vw - 320px)/(1024 - 320)));
+      line-height: calc(11px + (20 - 11)*((100vw - 320px)/(1024 - 320)));
+      margin-bottom: calc(7px + (12 - 7)*((100vw - 320px)/(1024 - 320)));
+    }
+    #form4 #enterOrder {
+      margin-bottom: calc(12px + (24 - 12)*((100vw - 320px)/(1024 - 320)));
+    }
+    #form4 button, 
+    #form5 button {
+      margin-top: calc(30px + (48 - 30)*((100vw - 320px)/(1024 - 320)));
+    }  
+}
+@media(max-width: 696px) {
+    .track-order__items {
+      flex-direction: column;
+      align-items: center;
+    } 
+    #trackOrderOr {
+      margin-top: 0px;
+      line-height: 50%;
+    }
+    #form4 #enterEmail, 
+    #form4 #enterOrder, 
+    #form5 #enterTracking {
+      width: calc(290px + (400 - 290)*((100vw - 320px)/(696 - 320)));
+    }
+}

@@ -1,0 +1,73 @@
+.faq-heading {
+    margin-top: 100px;
+    .conteiner {
+      max-width: 1052px;
+      padding: 0 15px;
+      margin: 0 auto;
+    }
+}
+.faq-image {
+    position: relative;
+}
+#faqImageLabel {
+  position: absolute;
+  top: -24px;
+  left: 0;
+}
+.faq-title {
+    p {
+      line-height: 14px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 16px;
+      font-family: 'Linotype Didot Std';
+      font-size: 48px;
+      line-height: 48px;
+      text-align: center;
+    }
+    h3 { 
+      margin-top: 20px;
+      font-family: 'Northwell';
+      font-size: 64px;
+      line-height: 64px;
+      text-align: center;
+      color: var(--light-brown-color);
+    }
+}
+//---@media faq-heading-----------------
+@media(max-width: 1440px) {
+    .faq-heading {
+      margin-top: calc(20px + (100 - 20)*((100vw - 320px)/(1440 - 320)));
+    }
+}
+@media(max-width: 1052px) {
+    #faqImageLabel {
+      width: calc(115px + (161 - 115)*((100vw - 768px)/(1052 - 768)));
+    } 
+    .faq-title p{
+      font-size: calc(10px + (14 - 10)*((100vw - 320px)/(1052 - 320)));
+      line-height: calc(10px + (14 - 10)*((100vw - 320px)/(1052 - 320)));
+    }
+    .faq-title h2 {
+      margin-top: calc(9px + (16 - 9)*((100vw - 320px)/(1052 - 320)));
+      font-size: calc(22px + (48 - 22)*((100vw - 320px)/(1052 - 320)));
+      line-height: calc(26px + (48 - 26)*((100vw - 320px)/(1052 - 320)));
+    }
+    .faq-title h3 {
+      margin-top: calc(6px + (20 - 6)*((100vw - 320px)/(1052 - 320))); 
+      font-size: calc(24px + (64 - 24)*((100vw - 320px)/(1052 - 320)));
+      line-height: calc(24px + (64 - 24)*((100vw - 320px)/(1052 - 320)));
+    }
+}
+@media(max-width: 1022px) {
+    .faq-heading .conteiner {
+      padding: 0px;
+    }
+}
+@media(max-width: 767px) {
+    #faqImageLabel {
+      display: none;
+    }
+}

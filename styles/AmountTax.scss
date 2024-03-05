@@ -1,0 +1,15 @@
+.amount__tax {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    p {
+        font-size: 36px;
+        line-height: 36px;
+    }
+    span {
+        display: block;
+        line-height: 14px;
+        opacity: 0.6;
+    }
+}

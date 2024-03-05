@@ -1,0 +1,14 @@
+.article-points {
+    margin-top: 40px;
+    .conteiner {
+        max-width: 626px;
+        padding: 0 15px;
+        margin: 0 auto; 
+    }
+}
+//---@media-article-points----------
+@media(max-width: 1024px) {
+    .article-points {
+        margin-top: calc(14px + (40 - 14)*((100vw - 320px)/(1024 - 320)));
+    }
+}

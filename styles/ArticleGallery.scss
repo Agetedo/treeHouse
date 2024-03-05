@@ -1,0 +1,30 @@
+.article-gallery {
+    margin-top: 64px;
+    .conteiner {
+      max-width: 1170px;
+      padding: 0 15px;
+      margin: 0 auto; 
+    }
+}
+#articleGallery > div.swiper-scrollbar.swiper-scrollbar-horizontal {
+    margin: 80px auto 0 auto;
+    position: static;
+    width: 32%;
+    background-color: var(--shopgallery-button-bg);
+}
+#articleGallery .swiper-scrollbar-drag {
+    background-color: var(--green-color);
+}
+
+//---@-media-#articleGaller-----------
+@media(max-width: 1170px) {
+    .article-gallery {
+      margin-top: calc(22px + (64 - 22)*((100vw - 320px)/(1170 - 320)));
+    }
+    .swiper-horizontal > .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
+      height: calc(2px + (4 - 2)*((100vw - 320px)/(1170 - 320)));
+    }
+    #articleGallery > div.swiper-scrollbar.swiper-scrollbar-horizontal {
+      margin-top: calc(40px + (80 - 40)*((100vw - 320px)/(1170 - 320)));
+    }
+}

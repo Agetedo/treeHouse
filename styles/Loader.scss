@@ -1,0 +1,27 @@
+#dualRing {
+  margin: 30px auto 128px auto;
+  font-size: 26px;
+  color: var(--light-brown-color);
+  text-align: center;
+  width: 180px;
+  height: 80px;
+}
+#dualRing:after {
+  content: " ";
+  margin: 8px auto; 
+  display: block;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 6px solid var(--green-color);
+  border-color: var(--green-color) transparent var(--light-brown-color) transparent;
+  animation: dual-ring 1.2s linear infinite;
+}
+@keyframes dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}

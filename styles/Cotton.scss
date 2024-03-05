@@ -1,0 +1,112 @@
+.cotton {
+    margin-top: 27px;
+    margin-bottom: 146px;
+    .conteiner {
+      position: relative;
+      max-width: 1264px;
+      padding: 0 15px;
+      margin: 0 auto;
+    }
+}
+.cotton__items {
+    display: flex;
+    align-items: flex-start;
+    gap: 255px;
+}
+.cotton-indicators {
+    padding-top: 29px;
+    h3 {
+      font-size: 20px;
+      line-height: 20px;
+      text-transform: uppercase;
+    }
+}
+.cotton-indicators__items {
+    margin-top: 44px;
+    display: flex;
+    align-items: flex-start;
+    gap: 80px;
+}
+.cotton-indicator {
+    p {
+      max-width: 128px;
+      line-height: 19px;
+    }
+    span {
+      margin-top: 47px;
+      margin-bottom: 10px;
+      display: block;
+      font-family: 'Northwell';
+      font-size: 80px;
+      line-height: 52px;
+      color: var(--light-brown-color);
+    }
+}
+#cottonLabel01 {
+    position: absolute;
+    top: 204px;
+    right: 42px;
+}
+#cottonlabel02 {
+    position: absolute;
+    top: 295px;
+    right: 0px;
+    animation: flicker-3 2.5s linear infinite both;
+}
+//---@media-cotton----------------------
+@media(max-width: 1440px) {
+    .cotton {
+      margin-bottom: calc(50px + (146 - 50)*((100vw - 320px)/(1440 - 320)));
+    }
+}
+@media(max-width: 1264px) {
+    .cotton-indicators h3 {
+      font-size: calc(14px + (20 - 14)*((100vw - 320px)/(1264 - 320)));
+      line-height: calc(16px + (20 - 16)*((100vw - 320px)/(1264 - 320)));
+    }
+    .cotton-indicator p {
+      font-size: calc(12px + (14 - 12)*((100vw - 320px)/(1264 - 320)));
+      line-height: calc(17px + (19 - 17)*((100vw - 320px)/(1264 - 320)));
+    }
+}
+@media(max-width: 1024px) {
+    .cotton__items {
+      align-items: center;
+      gap: calc(10px + (78 - 10)*((100vw - 480px)/(1024 - 480)));
+    }
+    .cotton-indicators__items {
+      gap: calc(36px + (80 - 36)*((100vw - 480px)/(1024 - 480)));
+    }
+}
+@media(max-width: 767px) {
+    #cottonlabel02 {
+      display: none;
+    }
+}
+@media(max-width: 640px) {
+    .cotton-indicators {
+      padding-top: calc(5px + (29 - 5)*((100vw - 320px)/(640 - 320)));
+    }
+    .cotton-indicators__items {
+      margin-top: calc(18px + (44 - 18)*((100vw - 320px)/(640 - 320)));
+    }
+}
+@media(max-width: 480px) {
+    .cotton__items  {
+      display: block;
+        img {
+          display: none;
+        }
+    }
+    #cottonLabel01 {
+      display: none;
+    }
+    .cotton-indicators__items {
+      gap: 76px;
+      justify-content: center;
+    }
+    .cotton-indicator span {
+      font-size: calc(55px + (80 - 55)*((100vw - 320px)/(480 - 320)));
+      line-height: calc(16px + (52 - 16)*((100vw - 320px)/(480 - 320)));
+    }
+}

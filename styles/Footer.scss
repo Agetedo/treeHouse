@@ -1,0 +1,249 @@
+#footer {
+    padding-top: 46px;
+    padding-bottom: 32px;
+    position: relative;
+    background-color: var(--green-color);
+    .conteiner {
+      max-width: 1264px;
+      padding: 0 15px;
+      margin: 0 auto;
+    }
+}
+.footer__label1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.footer__label2 {
+    position: absolute;
+    left: calc(50% - 113.5px);
+    bottom: 0px;
+}
+.footer__label3 {
+    position: absolute;
+    top: 50px;
+    right: 0px;
+}
+.footer__items {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.footer__subscribe h6{
+    max-width: 247px;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+#form1 {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#form1 input {
+    padding: 20px;
+    width: 319px;
+    height: 54px;
+    line-height: 14px;
+    color: var(--white-text-color);
+    outline-style: none;
+    background-color: inherit;
+    border: 1px solid var(--footer-form-placeholder-color);
+    border-right: none;
+    border-radius: 8px 0px 0px 8px;
+}
+#form1 input::placeholder {
+    line-height: 14px;
+    color: var(--footer-form-placeholder-color);
+}
+.subscribe__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 47px;
+    background-color: var(--light-brown-color);
+    font-family:'GT Cinetype Trial';
+    line-height: 14px;
+    text-align: center;
+    color: var(--white-text-color);
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    border-radius: 0px 8px 8px 0px;
+    transition: all 1s ease;
+}
+.footer__logo {
+    margin-top: 79px;
+}
+.footer__menu {
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+    z-index: 5;
+}
+.menu__caption {
+    margin-bottom: 24px;
+    line-height: 14px;
+    text-transform: uppercase;
+}
+.sitemap-menu__item:not(:last-child),
+.social-menu__item:not(:last-child),
+.custome-menu__item:not(:last-child) {
+    margin-bottom: 12px;
+}
+.sitemap-menu__item a,
+.social-menu__link,
+.custome-menu__link {
+    line-height: 14px;
+    transition: all 1s ease;
+}
+.sitemap-menu__list li a.active {
+    color: var(--light-brown-color);
+    cursor: default;
+}
+.sitemap-menu__list li a.pending {
+    color: var(--beige-color);
+}
+.payment-menu__item:not(:last-child) {
+    margin-bottom: 11px;
+}
+.payment-menu__link {
+    transition: all 1s ease;
+}
+.footer__rights {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    p {
+      line-height: 17px;
+      letter-spacing: -0.03em;
+    }
+}
+#pageTop {
+    cursor: pointer;
+}
+.scroll-to-top {
+    background-color: transparent !important;
+    right: 0px !important;
+    bottom: 0px !important;
+    position: relative !important;
+    z-index: 0 !important;
+    padding: 0px !important;
+    width: 62px !important;
+    height: 47px !important;
+    box-shadow: none !important;
+    transition: all 1s ease;
+}
+//---@media-footer----------------  
+@media (hover: hover) and (pointer: fine) {
+    .subscribe__button:hover {
+        opacity: 0.7;
+    }
+    .social-menu__link:hover,
+    .custome-menu__link:hover {
+        color: var(--light-brown-color);
+    } 
+    .payment-menu__link:hover,
+    .scroll-to-top:hover {
+        opacity: 0.6;
+    }
+}
+@media (hover: none) {
+    .subscribe__button:active {
+        opacity: 0.7;
+    }
+    .social-menu__link:active,
+    .custome-menu__link:active {
+        color: var(--light-brown-color);
+    } 
+    .payment-menu__link:active,
+    .scroll-to-top:active {
+        opacity: 0.6;
+    }
+}
+@media(max-width: 1264px) {
+    #form1 input {
+      width: calc(259px + (319 - 259)*((100vw - 1025px)/(1264 - 1025)));
+    }
+    .footer__rights p {
+      font-size: calc(9px + (14 - 9)*((100vw - 320px)/(1264 - 320))); 
+      line-height: calc(11px + (17 - 11)*((100vw - 320px)/(1264 - 320))); 
+    }
+}
+@media(max-width: 1024px) {
+    .scroll-to-top,
+    .footer__label1,
+    .footer__label2,
+    .footer__label3,
+    .footer__rights .pageTop,
+    .sitemap__menu,
+    .customer__menu {
+      display: none;
+    }
+    #form1 input {
+      width: 259px;
+    }
+    footer {
+      position: static;
+      padding-bottom: 13px;
+    }
+    .footer__rights {
+      margin-top: 30px;
+      display: block;
+      text-align: center;
+    }
+    .payment__menu {
+      order: 1;
+    }
+    .social__menu {
+      order: 2;
+    }
+}
+@media(max-width: 715px) {
+    .footer__items {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+    .footer__subscribe h6 {
+      text-align: center;
+      max-width: 100%;
+    }
+    .footer__logo {
+      display: none;
+    }
+    #form1 input {
+      width: calc(200px + (259 - 200)*((100vw - 320px)/(715 - 320)));
+      padding: calc(9px + (20 - 9)*((100vw - 320px)/(715 - 320)));
+      height: calc(42px + (54 - 42)*((100vw - 320px)/(715 - 320)));
+    }
+    .subscribe__button {
+      padding-right: calc(25px + (47 - 25)*((100vw - 320px)/(715 - 320)));
+      padding-left: calc(25px + (47 - 25)*((100vw - 320px)/(715 - 320)));
+      font-size: calc(12px + (14 - 12)*((100vw - 320px)/(715 - 320)));
+      padding-top: calc(14px + (20 - 14)*((100vw - 320px)/(715 - 320)));
+      padding-bottom: calc(14px + (20 - 14)*((100vw - 320px)/(715 - 320)));
+    }
+    .footer__subscribe h6,
+    .menu__caption {
+      font-size: calc(12px + (14 - 12)*((100vw - 320px)/(715 - 320)));
+      line-height: calc(16px + (18 - 16)*((100vw - 320px)/(715 - 320)));
+    }
+    .menu__caption {
+      margin-bottom: calc(15px + (24 - 15)*((100vw - 320px)/(715 - 320)));
+    }
+    footer {
+      padding-top: calc(30px + (46 - 30)*((100vw - 320px)/(715 - 320)));
+    }
+    #form1 {
+      margin-top: calc(10px + (20 - 10)*((100vw - 320px)/(715 - 320)));
+    }
+    .payment-menu__link img {
+      width: calc(55px + (66 - 55)*((100vw - 320px)/(715 - 320)));
+    }
+    .social-menu__link {
+      font-size: calc(11px + (14 - 11)*((100vw - 320px)/(715 - 320)));
+    }
+}

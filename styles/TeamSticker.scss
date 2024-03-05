@@ -1,0 +1,27 @@
+.team-sticker {
+    margin-top: 90px;
+    .conteiner {
+      max-width: 1180px;
+      padding: 0 15px;
+      margin: 0 auto;
+    }
+}
+#teamSticker {
+    background-image: url("/team-sticker-image.png");
+    background-repeat: no-repeat;
+    background-position: right 5px;
+    background-size: contain;
+    height: 146px;
+}
+//---@media-team-sticker------------------
+@media(max-width: 1440px) {
+    .team-sticker {
+      margin-top: calc(5px + (90 - 5)*((100vw - 320px)/(1440 - 320)));
+    }
+}
+@media(max-width: 1264px) {
+    #teamSticker {
+      height: calc(95px + (146 - 95)*((100vw - 320px)/(1264 - 320)));
+      background-position: right calc(3px + (5 - 3)*((100vw - 320px)/(1264 - 320)));
+    }
+}

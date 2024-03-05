@@ -1,0 +1,75 @@
+.page-404 {
+    padding: 0 10px 0 10px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background-image: url("./soon-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    text-align: center;
+    
+    span {
+      display: inline-block;
+      font-size: 180px;
+      line-height: 182px;
+      color: var(--light-brown-color);
+    }
+    h1 {
+      font-size: 50px;
+      font-weight: 600;
+      color: var(--green-color);
+    }
+    p {
+      font-size: 26px;
+      line-height: 28px;
+    }
+    a {
+      padding: 10px;
+      display: inline-block;
+      background-color: var(--white-text-color);
+      font-size: 22px;
+      line-height: 24px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 7px 2px var(--box-shadow-grey-color);
+      transition: all 1s ease;
+    }
+}
+//---@media page-404-----------
+@media (hover: hover) and (pointer: fine) {
+    .page-404 a:hover {
+      background-color: var(--page404-light-green-color);
+      box-shadow: none;
+    }
+}
+@media (hover: none) {
+    .page-404 a:active {
+      background-color: var(--page404-light-green-color);
+      box-shadow: none;
+    }
+}
+@media(max-width: 1440px) {
+    .page-404 {
+      gap: calc(15px + (50 - 15)*((100vw - 320px)/(1440 - 320)));
+    }
+    .page-404 span {
+      font-size: calc(70px + (180 - 70)*((100vw - 320px)/(1440 - 320)));
+      line-height: calc(72px + (180 - 72)*((100vw - 320px)/(1440 - 320)));
+    }
+    .page-404 h1 {
+      font-size: calc(25px + (50 - 25)*((100vw - 320px)/(1440 - 320)));
+    }
+    .page-404 p {
+      font-size: calc(16px + (26 - 16)*((100vw - 320px)/(1440 - 320)));
+      line-height: calc(18px + (28 - 18)*((100vw - 320px)/(1440 - 320)));
+    }
+    .page-404 a {
+      padding: calc(6px + (10 - 6)*((100vw - 320px)/(1440 - 320))); 
+      font-size: calc(16px + (22 - 16)*((100vw - 320px)/(1440 - 320)));
+      line-height: calc(18px + (24 - 18)*((100vw - 320px)/(1440 - 320)));
+      border-radius: calc(5px + (10 - 5)*((100vw - 320px)/(1440 - 320)));
+    }
+}

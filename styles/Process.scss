@@ -1,0 +1,103 @@
+.process {
+    margin-top: 160px;
+    .conteiner {
+      position: relative;
+      max-width: 1264px;
+      padding: 0 15px;
+      margin: 0 auto;
+    }
+}
+.process__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+#processImage01 {
+    margin-top: 97px;
+}
+.process__content {
+    margin-top: 141px;
+    .rubric { 
+      margin-top: 16px;
+      line-height: 17px;
+      text-transform: uppercase;
+    }
+}
+.process__text {
+    margin-top: 24px;
+    max-width: 385px;
+    line-height: 19px;
+} 
+.process__link {
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: underline;
+    transition: all 1s ease;
+}
+#processLabel {
+    position: absolute;
+    right: 15px;
+    bottom: -36px;
+}
+//---@media-process----------------
+@media (hover: hover) and (pointer: fine) {
+    .process__link:hover {
+      color: var(--light-brown-color);
+    }
+}
+@media (hover: none) {
+    .process__link:active {
+      color: var(--light-brown-color);
+    }
+}
+@media(max-width: 1440px) {
+    .process {
+      margin-top: calc(40px + (160 - 40)*((100vw - 320px)/(1440 - 320)));
+    }
+}
+@media(max-width: 1264px) {
+    .process__content .rubric {
+      margin-top: calc(9px + (16 - 9)*((100vw - 320px)/(1264 - 320)));
+      font-size: calc(10px + (14 - 10)*((100vw - 320px)/(1264 - 320)));
+      line-height: calc(12px + (17 - 12)*((100vw - 320px)/(1264 - 320)));
+    }
+    .process__text {
+      font-size: calc(12px + (14 - 12)*((100vw - 320px)/(1264 - 320)));
+      line-height: calc(17px + (19 - 17)*((100vw - 320px)/(1264 - 320)));
+    }
+}
+@media(max-width: 1024px) {
+    #processImage02 {
+      display: none;
+    }
+    #processImage01,
+    .process__content {
+      margin-top: 0px;
+    }
+    .process__items {
+      align-items: center;
+      gap: calc(15px + (30 - 15)*((100vw - 320px)/(1024 - 320)));
+    }  
+}
+@media(max-width: 580px) {
+    .process__items {
+      flex-direction: column;
+    }
+    .process__text {
+      max-width: 100%;
+    }
+    #processLabel {
+      top: -75px;
+    }
+}
+@media(max-width: 385px) {
+    .process .conteiner {
+      padding: 0px;
+    }
+    .process__content {
+      padding: 0px 15px 0px 15px;
+    }
+    #processImage01 img {
+      max-width: 100%;
+    }
+}

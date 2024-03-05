@@ -1,0 +1,96 @@
+.cost {
+    margin-top: 180px;
+}
+.cost-title__items {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.cost-title {
+    h3 {
+      font-family: 'Linotype Didot Std';
+      font-size: 48px;
+      line-height: 48px;
+    }
+    .rubric {
+      margin-top: 16px;
+      max-width: 330px;
+      line-height: 17px;
+      text-transform: uppercase;
+    }
+}
+.cost-text p {
+   margin-left: -109px;
+   max-width: 335px; 
+   line-height: 19px;
+}
+.cost-text p:not(:last-child) {
+    margin-bottom: 16px;
+}
+#costTitleImage {
+    margin-bottom: -5px;
+    z-index: 10;
+}
+.cost__images {
+    display: flex;
+    align-items: flex-start;
+    gap: 41px;
+}
+//---@media cost-------------------------
+@media(max-width: 1440px) {
+    .cost {
+      margin-top: calc(40px + (180 - 40)*((100vw - 320px)/(1440 - 320)));
+    }
+}
+@media(max-width: 1264px) {
+    .cost__images {
+      gap: calc(10px + (41 - 10)*((100vw - 768px)/(1264 - 768)));
+    }
+    .cost-title h3 {
+      font-size: calc(22px + (48 - 22)*((100vw - 320px)/(1264 - 320)));
+      line-height: calc(26px + (48 - 26)*((100vw - 320px)/(1264 - 320)));
+    }
+    .cost-title .rubric {
+      margin-top: calc(9px + (16 - 9)*((100vw - 320px)/(1264 - 320)));
+      font-size: calc(10px + (14 - 10)*((100vw - 320px)/(1264 - 320)));
+      line-height: calc(12px + (17 - 12)*((100vw - 320px)/(1264 - 320)));
+    }
+    .cost-text p {
+      max-width:  calc(255px + (335 - 255)*((100vw - 1023px)/(1264 - 1023)));
+      font-size: calc(11px + (14 - 11)*((100vw - 1023px)/(1264 - 1023)));
+      line-height: calc(17px + (19 - 17)*((100vw - 1023px)/(1264 - 1023)));
+    }
+    .cost-text p:not(:last-child) {
+      margin-bottom: calc(8px + (16 - 8)*((100vw - 1023px)/(1264 - 1023)));
+    }
+    #costTitleImage  {
+      width: calc(233px + (268 - 233)*((100vw - 768px)/(1264 - 768)));
+    }
+}
+@media(max-width: 1023px) {
+    .cost-text p {
+      display: none; 
+    } 
+}
+@media(max-width: 767px) {
+    .cost__images {
+      gap: calc(5px + (10 - 5)*((100vw - 320px)/(767 - 320)));
+    } 
+    #costTitleImage {
+      display: none;
+    }
+    .cost-title__items {
+      display: block; 
+    }
+    .cost-title {
+      margin-bottom: calc(12px + (30 - 12)*((100vw - 320px)/(767 - 320)));
+    }
+    .cost-title .rubric {
+      max-width: 100%;
+    }
+}
+@media(max-width: 414px) {
+    .cost__images {
+      flex-direction: column;
+    }
+}

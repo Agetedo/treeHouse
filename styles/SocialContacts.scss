@@ -1,0 +1,200 @@
+.social-contacts {
+    position: relative;
+    margin-top: 75px;
+    .conteiner {
+      max-width: 1264px;
+      padding: 0 15px;
+      margin: 0 auto;
+    }
+}
+#socialContactsLabel {
+    position: absolute;
+    top: 200px;
+    right: 0;
+}
+.social-contacts__items {
+    display: flex;
+    align-items: center;
+    gap: 33px;
+}
+.social-contacts__caption {
+    margin-top: 16px;
+    line-height: 14px;
+    text-transform: uppercase;
+}
+.social-contacts__title {
+    margin-top: 16px;
+    font-family: 'Linotype Didot Std';
+    font-size: 48px;
+    line-height: 48px;
+}
+.social-contacts__text {
+    margin-top: 16px;
+    max-width: 321px;
+    line-height: 19px;
+}
+#socialEmail {
+    display: block;
+    margin-top: 73px;
+    line-height: 14px;
+    color: var(--light-brown-color);
+    text-transform: uppercase;
+}
+#socialEmailAddress {
+    margin-top: 16px;
+    font-size: 32px;
+    line-height: 32px;
+    text-transform: uppercase;
+}
+.social-contacts__explication { 
+    margin-top: 16px;
+    max-width: 385px;
+    line-height: 19px;
+}
+.social-contacts__links {
+    padding-top: 125px;
+    padding-bottom: 116px;
+    padding-left: 309px;
+    padding-right: 217px;
+    background-image: url("/social-contacts-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: flex-start;
+    gap: 84px;
+}
+.social-links {
+    width: 100px;
+    position: relative;
+    transform: rotate(-3.64deg);
+    h4 {
+      line-height: 14px;
+      color: var(--light-brown-color);
+      text-transform: uppercase;
+    }
+}
+.social-list {
+    margin-top: 18px;
+}
+.social-item:not(:last-child) {
+    margin-bottom: 8px;
+}
+.social-item a {
+    line-height: 19px;
+    transition: all 1s ease;
+}
+.social-contacts__hours {
+    transform: rotate(5.80deg);
+    h4 {
+      line-height: 14px;
+      color: var(--light-brown-color);
+      text-transform: uppercase; 
+    }
+}
+#businessHours {
+    margin-top: 18px;
+    line-height: 19px;
+    text-align: center;
+}
+#socialTooltip {
+    transform: rotate(3.64deg);
+    position: absolute;
+    bottom: 3px;
+    left: 67px;
+    cursor: pointer;
+    .tooltip-text { 
+      position: absolute;
+      margin-top: 22px;
+      margin-left: 14px;
+      visibility: hidden;
+      z-index: 1;
+      opacity: 0;
+      padding: 30px;
+      width: 240px;
+      background-color: var(--color-tooltip-bg);
+      line-height: 19px;
+      border-radius: 8px;
+      box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.20);
+      transition: opacity 0.3s;
+    }
+}
+#socialTooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+//---@media-social-contacts------------
+@media (hover: hover) and (pointer: fine) {
+    .social-item a:hover {
+      color: var(--light-brown-color);
+    }
+    #vipPopupIcon:hover {
+      opacity: 0.6;
+    }
+}
+@media (hover: none) {
+    .social-item a:active {
+      color: var(--light-brown-color);
+    }
+    #vipPopupIcon:active {
+      opacity: 0.6;
+    }
+}
+@media(max-width: 1440px) {
+    .social-contacts {
+      margin-top: calc(15px + (75 - 15)*((100vw - 320px)/(1440 - 320)));
+    }
+}
+@media(max-width: 1264px) {
+    .social-contacts__items {
+      gap: calc(10px + (33 - 10)*((100vw - 1241px)/(1264 - 1241)));
+    }
+}
+@media(max-width: 1241px) {
+    .social-contacts__items {
+      flex-direction: column;
+      gap: 30px;
+    }
+    .social-contacts__text,
+    .social-contacts__explication {
+      max-width: 100%;
+    }
+}
+@media(max-width: 859px) {
+    .social-contacts__links {
+      display: none;
+    }
+    #socialContactsLabel {
+      width: calc(32px + (67 - 32)*((100vw - 320px)/(859 - 320)));
+      top: calc(77px + (200 - 77)*((100vw - 320px)/(859 - 320)));
+    }
+    .social-contacts__email img {
+      width: calc(60px + (75 - 60)*((100vw - 320px)/(859 - 320)));
+    }
+    .social-contacts__caption {
+      margin-top: calc(9px + (16 - 9)*((100vw - 320px)/(859 - 320)));
+      font-size: calc(10px + (14 - 10)*((100vw - 320px)/(859 - 320)));
+      line-height: calc(10px + (14 - 10)*((100vw - 320px)/(859 - 320)));
+    }
+    .social-contacts__title {
+      margin-top: calc(9px + (16 - 9)*((100vw - 320px)/(859 - 320))); 
+      font-size: calc(22px + (48 - 22)*((100vw - 320px)/(859 - 320)));
+      line-height: calc(26px + (48 - 26)*((100vw - 320px)/(859 - 320)));
+    }
+    .social-contacts__text,
+    .social-contacts__explication {
+      margin-top: calc(9px + (16 - 9)*((100vw - 320px)/(859 - 320)));
+      font-size: calc(12px + (14 - 12)*((100vw - 320px)/(859 - 320)));
+      line-height: calc(17px + (19 - 17)*((100vw - 320px)/(859 - 320)));
+    }
+    #socialEmail {
+      margin-top: calc(30px + (72 - 30)*((100vw - 320px)/(859 - 320)));
+      font-size: calc(9px + (14 - 9)*((100vw - 320px)/(859 - 320)));
+      line-height: calc(9px + (14 - 9)*((100vw - 320px)/(859 - 320)));
+    }
+    #socialEmailAddress {
+      margin-top: calc(9px + (16 - 9)*((100vw - 320px)/(859 - 320)));
+      font-size: calc(16px + (32 - 16)*((100vw - 320px)/(859 - 320)));
+      line-height: calc(16px + (32 - 16)*((100vw - 320px)/(859 - 320)));
+    }
+}

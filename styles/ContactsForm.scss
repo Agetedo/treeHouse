@@ -1,0 +1,208 @@
+.contacts-form {
+    margin-top: 160px;
+    margin-bottom: 179px; 
+    .conteiner {
+      position: relative;
+      max-width: 1264px;
+      padding: 0 15px;
+      margin: 0 auto;
+    } 
+}
+#formLabel01 {
+    position: absolute;
+    top: -56px;
+    left: 50%;
+}
+#formLabel02 {
+    position: absolute;
+    right: 124px;
+    bottom: -70px;
+}
+.contacts-form__title {
+    max-width: 490px;
+    font-family: 'Linotype Didot Std';
+    font-size: 48px;
+    line-height: 48px;
+}
+.contacts-form__items {
+    display: flex;
+    align-items: stretch;
+    gap: 169px;
+}
+#contactsForm {
+    margin-top: 58px;
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+    input {
+      padding: 10px 10px 15px 10px;
+      width: 360px;
+      height: 40px;
+      line-height: 14px;
+      color: var(--green-color);
+      outline-style: none;
+      background-color: transparent;
+      border-bottom: 1px solid var(--green-color);
+    }
+}
+#contactsForm input::placeholder,
+#messageSend::placeholder {
+    font-family: 'Stolzl Book';
+    font-size: 14px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: var(--green-color);
+    text-transform: uppercase;
+}
+#nameSend {
+    border-bottom: none!important;
+    border-top: 1px solid var(--green-color);
+    border-right: 1px solid var(--green-color);
+    border-top-right-radius: 15px; 
+}
+#messageSend {
+    display: block;
+    resize: none;
+    padding: 10px 10px 15px 10px;
+    width: 360px;
+    font-family: 'GT Cinetype Trial';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    color: var(--green-color);
+    outline-style: none;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--green-color);
+    border-left: 1px solid var(--green-color);
+    border-bottom-left-radius: 15px; 
+}
+.send__button {
+    width: 133px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 48px;
+    background-color: var(--light-brown-color);
+    font-family:'GT Cinetype Trial';
+    line-height: 14px;
+    text-align: center;
+    color: var(--white-text-color);
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    border-radius: 80px;
+    transition: all 1s ease;
+}
+.form-images__items {
+    display: flex;
+    gap: 146px;
+}
+#formImage01 {
+    align-self: flex-end;
+}
+#formImage02 {
+    position: relative;
+    p {
+      position: absolute;
+      top: -12px;
+      left: -113px;
+      transform: rotate(-15.00deg);
+      font-family: 'Northwell';
+      font-size: 64px;
+      line-height: 64px;
+      color: var(--light-brown-color);
+    }
+}
+//---@media-contacts-form--------------
+@media (hover: hover) and (pointer: fine) {
+    .send__button:hover {
+      background-color: var(--green-color);
+    }
+}
+@media (hover: none) {
+    .send__button:active {
+      background-color: var(--green-color);
+    }
+}
+@media(max-width: 1440px) {
+    .contacts-form {
+      margin-top: calc(40px + (160 - 40)*((100vw - 320px)/(1440 - 320)));
+      margin-bottom: calc(50px + (179 - 50)*((100vw - 320px)/(1440 - 320)));
+    }
+}
+@media(max-width: 1264px) {
+    .form-images__items {
+      gap: calc(24px + (146 - 24)*((100vw - 1024px)/(1264 - 1024)));
+    }
+    .contacts-form__items {
+      gap: calc(54px + (169 - 54)*((100vw - 1024px)/(1264 - 1024)));
+    }
+    #formLabel01 {
+      width: calc(50px + (74 - 50)*((100vw - 320px)/(1264 - 320)));
+    }
+    .contacts-form__title {
+      font-size: calc(22px + (48 - 22)*((100vw - 320px)/(1264 - 320)));
+      line-height: calc(26px + (48 - 26)*((100vw - 320px)/(1264 - 320)));
+    }
+    #contactsForm input::placeholder,
+    #messageSend::placeholder {
+      font-size: calc(12px + (14 - 12)*((100vw - 320px)/(1264 - 320)));
+    }
+    #contactsForm input,
+    #messageSend {
+      padding-top: calc(6px + (10 - 6)*((100vw - 320px)/(1264 - 320)));
+      padding-right: calc(6px + (10 - 6)*((100vw - 320px)/(1264 - 320)));
+      padding-bottom: calc(10px + (15 - 10)*((100vw - 320px)/(1264 - 320))); 
+      padding-left: calc(6px + (10 - 6)*((100vw - 320px)/(1264 - 320))); 
+    }
+    #contactsForm {
+      margin-top: calc(23px + (58 - 23)*((100vw - 320px)/(1264 - 320))); 
+      gap: calc(20px + (38 - 20)*((100vw - 320px)/(1264 - 320)));
+    }
+    .send__button {
+      width: calc(97px + (133 - 97)*((100vw - 320px)/(1264 - 320)));
+      font-size: calc(11px + (14 - 11)*((100vw - 320px)/(1264 - 320)));
+      line-height: calc(11px + (14 - 11)*((100vw - 320px)/(1264 - 320)));
+      padding: calc(10px + (18 - 10)*((100vw - 320px)/(1264 - 320)))
+               calc(30px + (48 - 30)*((100vw - 320px)/(1264 - 320)));
+    }
+    #formLabel02 {
+      width: calc(91px + (149 - 91)*((100vw - 320px)/(1264 - 320)));
+      right: calc(82px + (124 - 82)*((100vw - 320px)/(1264 - 320))); 
+      bottom: calc(-40px + (-70 - 40)*((100vw - 320px)/(1264 - 320)));
+    }
+}
+@media(max-width: 1023px) {
+    #formImage01 {
+      display: none;
+    }
+    .form-images__items {
+      display: block;
+    }
+    .contacts-form__items {
+      justify-content: space-between;
+      align-items: center;
+    }
+    .contacts-form__title {
+      max-width: 100%;
+      text-align: center;
+    }
+}
+@media(max-width: 900px) {
+    #formImage02 p,
+    #formImage02 {
+      display: none;
+    }
+    .contacts-form__items {
+      display: block;
+    }
+    #contactsForm input,
+    #messageSend {
+      width: 100%;
+    }
+    #contactsForm {
+      padding-left: calc(0px + (100 - 0)*((100vw - 320px)/(900 - 320)));
+      padding-right: calc(0px + (100 - 0)*((100vw - 320px)/(900 - 320)));
+    }
+}

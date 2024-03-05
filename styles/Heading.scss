@@ -1,0 +1,159 @@
+.heading {
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-bottom: 102px;
+    background-image: url("/header-banner-bg-image.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.heading__conteiner {
+    margin: 72px auto 0 auto;
+    max-width: 870px;
+    padding: 0 15px; 
+}
+.heading__content {
+    margin-left: 429px; 
+    
+    #headingCaption {
+      display: block;
+      line-height: 14px;
+      text-transform: uppercase;
+      color: var(--white-text-color);
+    }
+    h2 {
+      margin-top: 16px;
+      font-family: 'Linotype Didot Std';
+      font-size: 64px;
+      line-height: 64px;
+      color: var(--white-text-color);
+    }
+    #titleDesign {
+      margin-top: 4px;
+      margin-left: -101px;
+    }
+    p {
+      margin-top: 20px;
+      max-width: 314px;
+      line-height: 20px;
+      color: var(--white-text-color);
+    }
+}
+.heading__buttons {
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+.button__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 48px;
+    border: none;
+    background-color: var(--light-brown-color);
+    border-radius: 80px;
+    line-height: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--white-text-color);
+    transition: all 1s ease;
+}
+.arrow__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px;
+    border: none;
+    background-color: var(--light-brown-color);
+    border-radius: 50%;
+    transition: all 1s ease;
+}
+//---@media-heading----------------------
+@media (hover: hover) and (pointer: fine) {
+    :where(.button__link,.arrow__link):hover {
+      background-color: var(--green-color);
+    }
+}
+@media (hover: none) {
+    :where(.button__link,.arrow__link):active {
+      background-color: var(--green-color);
+    }
+}
+@media(max-width: 1264px) {
+    .heading__content h2 {
+      font-size: calc(20px + (64 - 20)*((100vw - 320px)/(1264 - 320)));
+      line-height: calc(33px + (64 - 23)*((100vw - 320px)/(1264 - 320)));
+    }
+    .heading__content p {
+      margin-top: calc(10px + (20 - 10)*((100vw - 769px)/(1264 - 769)));
+      font-size: calc(12px + (14 - 12)*((100vw - 769px)/(1264 - 769)));
+      line-height: calc(17px + (20 - 17)*((100vw - 769px)/(1264 - 769)));
+    }
+    .heading__conteiner {
+      margin-top: calc(0px + (72 - 0)*((100vw - 320px)/(1264 - 320)));
+    }
+    .heading__buttons {
+      margin-top: calc(20px + (48 - 20)*((100vw - 320px)/(1264 - 320)));
+    }
+}
+@media(max-width: 1024px) {
+    .button__link {
+      font-size: calc(11px + (14 - 11)*((100vw - 320px)/(1024 - 320)));
+      line-height: calc(11px + (14 - 11)*((100vw - 320px)/(1024 - 320)));
+      padding: calc(10px + (18 - 10)*((100vw - 320px)/(1024 - 320)))
+               calc(30px + (48 - 30)*((100vw - 320px)/(1024 - 320)));
+    }
+    .arrow__link {
+      display: none;
+    }
+}
+@media(max-width: 870px) {
+    .heading__content {
+      margin-left: calc(111px + (429 - 111)*((100vw - 320px)/(870 - 320)));
+    }
+}
+@media(max-width: 768px) {
+    .heading__content p,
+    .heading__content #headingCaption {
+      display: none;
+    }
+    .heading__content h2 {
+      margin-top: 0;
+    }
+    .heading__content #titleDesign {
+      margin-left: 0px;
+    }
+}
+//---scrollDown------------------------------------------------------------------------------------
+#scrollDown {
+    position: absolute; 
+    right: 101px;
+    bottom: 52px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    transition: all 1s ease;
+  
+    span {
+      display: block;
+      line-height: 14px;
+      color: var(--white-text-color);
+    }
+}
+//---@media-scrollDown---------------------
+@media (hover: hover) and (pointer: fine) {
+    #scrollDown:hover {
+      opacity: 0.5;
+    }
+}
+@media(max-width: 1024px) {
+    #scrollDown {
+      display: none;
+    }
+    .heading {
+      position: static;
+    }
+}

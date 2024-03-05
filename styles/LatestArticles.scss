@@ -1,0 +1,141 @@
+.latest-articles {
+    position: relative;
+    margin-top: 145px;
+    background-color: var(--grey-color);
+    padding-top: 165px;
+    padding-bottom: 80px;
+    .conteiner {
+      max-width: 1264px;
+      padding: 0 15px;
+      margin: 0 auto;
+    }
+}
+#latestArticlesLabel {
+    position: absolute;
+    top: -56px;
+    right: 78px;
+}
+.latest-articles__title {
+    font-family: 'Northwell';
+    font-size: 56px;
+    line-height: 56px;
+    text-transform: lowercase;
+}
+.latest-articles__items {
+    margin-top: 40px;
+    display: flex;
+    align-items: stretch;
+    gap: 39.5px;
+}
+.latest-article {
+  box-shadow: 6px 10px 25px 0px var(--journal-article-boxshadow);
+  background-color: var(--main-bg-color);
+}
+.latest-article__wrapper {
+    padding: 40px;
+}
+.latest-article__date {
+    line-height: 14px;
+}
+.latest-article__title {
+    margin-top: 16px;
+    a {
+      max-width: 250px;
+      font-family: 'Linotype Didot Std';
+      font-size: 20px;
+      line-height: 24px;
+      transition: all 1s ease;
+    }
+}
+.latest-article__text {
+    margin-top: 12px;
+    max-width: 378px;
+    line-height: 19px;
+}
+.read__link {
+    margin-top: 36px;
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+    padding-bottom: 3px;
+    border-bottom: 1px dashed var(--green-color);
+    line-height: 14px;
+    text-transform: uppercase;
+    transition: all 1s ease;
+}
+//---@media-latest-articles---------
+@media (hover: hover) and (pointer: fine) {
+    .latest-article__title a:hover {
+      color: var(--light-brown-color);
+    }
+    .read__link:hover {
+      opacity: 0.7;
+    }
+}
+@media (hover: none) {
+    .latest-article__title a:active {
+      color: var(--light-brown-color);
+    }
+    .read__link:active {
+      opacity: 0.7;
+    }
+}
+@media(max-width: 1440px) {
+    .latest-articles {
+      margin-top: calc(30px + (145 - 30)*((100vw - 320px)/(1440 - 320)));
+      padding-top: calc(30px + (165 - 30)*((100vw - 320px)/(1440 - 320)));
+      padding-bottom: calc(30px + (80 - 30)*((100vw - 320px)/(1440 - 320)));
+    }
+}
+@media(max-width: 1264px) {
+    #latestArticlesLabel {
+      top: calc(-24px + (-56 + 24)*((100vw - 320px)/(1264 - 320)));
+      width: calc(77px + (149 - 77)*((100vw - 320px)/(1264 - 320)));
+    }
+    .latest-articles__title {
+      font-size: calc(31px + (56 - 31)*((100vw - 320px)/(1264 - 320)));
+      line-height: calc(31px + (56 - 31)*((100vw - 320px)/(1264 - 320)));
+    }
+    .latest-article__date {
+      font-size: calc(9px + (14 - 9)*((100vw - 320px)/(1264 - 320)));
+      line-height: calc(11px + (14 - 11)*((100vw - 320px)/(1264 - 320)));  
+    }
+    .latest-article__title {
+      margin-top: calc(5px + (16 - 5)*((100vw - 320px)/(1264 - 320))); 
+    }
+    .latest-article__title a {
+      font-size: calc(16px + (20 - 16)*((100vw - 320px)/(1264 - 320)));
+      line-height: calc(20px + (24 - 20)*((100vw - 320px)/(1264 - 320)));  
+    }
+    .latest-article__text {
+      margin-top: calc(6px + (12 - 6)*((100vw - 320px)/(1264 - 320)));
+      font-size: calc(12px + (14 - 12)*((100vw - 320px)/(1264 - 320)));
+      line-height: calc(17px + (19 - 17)*((100vw - 320px)/(1264 - 320)));    
+    }
+    .latest-article__wrapper {
+      padding: calc(10px + (40 - 10)*((100vw - 320px)/(1264 - 320)));
+    }
+    .read__link {
+      margin-top: calc(23px + (36 - 23)*((100vw - 320px)/(1264 - 320)));
+      font-size: calc(11px + (14 - 11)*((100vw - 320px)/(1264 - 320)));
+      line-height: calc(11px + (14 - 11)*((100vw - 320px)/(1264 - 320)));
+      gap: calc(4px + (8 - 4)*((100vw - 320px)/(1264 - 320)));
+      padding-bottom: calc(1px + (3 - 1)*((100vw - 320px)/(1264 - 320)));
+    }
+    .latest-articles__items {
+      gap: calc(16px + (39.5 - 16)*((100vw - 768px)/(1264 - 768)));
+    }
+}
+@media(max-width: 767px) {
+    .latest-articles__items {
+      gap: calc(15px + (30 - 15)*((100vw - 320px)/(767 - 320)));
+    } 
+    .latest-article:nth-child(3) {
+      display: none;
+    }
+}
+@media(max-width: 415px) {
+    .latest-articles__items {
+      flex-direction: column;
+    }
+}

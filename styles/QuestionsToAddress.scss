@@ -1,0 +1,83 @@
+.questions__address {
+    position: relative;
+    margin-top: 140px;
+    margin-bottom: 160px;
+    .conteiner {
+      max-width: 543px;
+      padding: 0 15px;
+      margin: 0 auto;
+    }
+}
+#toAddressLabel {
+    position: absolute;
+    top: -70px;
+    left: 135px;
+}
+#toAddressIcon {
+    margin: auto;
+}
+.address__text {
+    margin: 16px auto 0 auto;
+    max-width: 382px;
+    line-height: 19px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.social-address__items {
+    margin-top: 24px;
+    text-align: center;
+    span {
+        line-height: 14px;
+        text-transform: uppercase;
+    }
+}
+#orDesign {
+    display: block;
+    font-family: 'Northwell';
+    font-size: 64px;
+    line-height: 64px;
+    text-align: center;
+    color: var(--light-brown-color);
+}
+.email__address {
+    margin-top: 6px;
+    font-size: 44px;
+    line-height: 44px;
+    text-align: center;
+    text-transform: uppercase;
+}
+//---@media-questions__address---------
+@media(max-width: 1052px) {
+    .questions__address {
+      margin-top: calc(30px + (140 - 30)*((100vw - 320px)/(1052 - 320)));
+      margin-bottom: calc(30px + (160 - 30)*((100vw - 320px)/(1052 - 320)));
+    } 
+    #toAddressIcon {
+      width: calc(70px + (106 - 70)*((100vw - 320px)/(1052 - 320)));
+    }
+    .address__text {
+      margin-top: calc(8px + (16 - 8)*((100vw - 320px)/(1052 - 320)));
+      font-size: calc(10px + (14 - 10)*((100vw - 320px)/(1052 - 320)));
+      line-height: calc(14px + (19 - 14)*((100vw - 320px)/(1052 - 320)));
+    }
+    .social-address__items {
+      margin-top: calc(12px + (24 - 12)*((100vw - 320px)/(1052 - 320)));
+    }
+    .social-address__items span {
+      font-size: calc(10px + (14 - 10)*((100vw - 320px)/(1052 - 320)));
+      line-height: calc(10px + (14 - 10)*((100vw - 320px)/(1052 - 320)));  
+    }
+    #orDesign {
+      font-size: calc(33px + (64 - 33)*((100vw - 320px)/(1052 - 320)));
+      line-height: calc(33px + (64 - 33)*((100vw - 320px)/(1052 - 320)));   
+    }
+    .email__address {
+      font-size: calc(16px + (44 - 16)*((100vw - 320px)/(1052 - 320)));
+      line-height: calc(16px + (44 - 16)*((100vw - 320px)/(1052 - 320)));
+    }
+}
+@media(max-width: 1023px) {
+    #toAddressLabel {
+      display: none;
+    }
+}
