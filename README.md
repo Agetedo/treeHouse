@@ -1,4 +1,4 @@
-# [TreeHouse store](https://thstore.netlify.app/)
+# [TreeHouse store](https://thstore.netlify.app/)<<< link to this project
 
 - React(Hooks), Vite
 - react-router-dom(createBrowserRouter)
