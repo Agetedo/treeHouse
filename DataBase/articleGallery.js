@@ -1,0 +1,41 @@
+export const articleGallery = [{
+    id: "artGal01",
+    imageSrc: "/article-gallery-image01.jpeg",
+    imageAlt: "Fabrics",
+}, {
+    id: "artGal02",
+    imageSrc: "/article-gallery-image02.jpeg",
+    imageAlt: "Fabrics",
+}, {
+    id: "artGal03",
+    imageSrc: "/article-gallery-image03.jpeg",
+    imageAlt: "Fabrics",
+}, {
+    id: "artGal04",
+    imageSrc: "/article-gallery-image04.jpeg",
+    imageAlt: "Fabrics",
+}, {
+    id: "artGal05",
+    imageSrc: "/article-gallery-image05.jpg",
+    imageAlt: "Fabrics",
+}, {
+    id: "artGal06",
+    imageSrc: "/article-gallery-image06.jpeg",
+    imageAlt: "Fabrics",
+}, {
+    id: "artGal07",
+    imageSrc: "/article-gallery-image07.jpg",
+    imageAlt: "Fabrics",
+}, {
+    id: "artGal08",
+    imageSrc: "/article-gallery-image08.jpg",
+    imageAlt: "Fabrics",
+}, {
+    id: "artGal09",
+    imageSrc: "/article-gallery-image09.jpg",
+    imageAlt: "Fabrics",
+}, {
+    id: "artGal10",
+    imageSrc: "/article-gallery-image10.jpg",
+    imageAlt: "Fabrics",
+}];
