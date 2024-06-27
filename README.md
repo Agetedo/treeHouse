@@ -1,4 +1,4 @@
-# [TreeHouse store](https://thstore.netlify.app/) <<< deploy
+# [TreeHouse store](https://thstore.netlify.app/) << deploy
 
 - React(Hooks), Vite
 - react-dom
